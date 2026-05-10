@@ -48,87 +48,6 @@ Rise at Seven is renowned for its "search-first" creative approach and its highl
 
 ---
 
-## 📂 Project Structure
-
-```text
-RiseAtSeven/
-├── public/                 # High-performance WebP/SVG assets
-│   ├── Header/             # Mega menu preview images
-│   ├── InfiniteMarquee/    # Slogan-related visual assets
-│   ├── LegacyAccordion/    # Peeling stack thumbnails
-│   ├── asset/              # Global brand icons & social proof
-│   ├── banner-*.jpg        # Hero background pool (randomized)
-│   └── featuredWorks/      # Case study gallery assets
-├── src/
-│   ├── app/                # Next.js App Router orchestration
-│   │   ├── globals.css     # Tailwind v4 CSS-first config & custom blurs
-│   │   ├── layout.jsx      # Global architecture & cinematic entry sequence
-│   │   └── page.jsx        # Narrative-driven homepage sections
-│   └── components/
-│       ├── home/           # Homepage feature components
-│       │   ├── AboutMission.jsx      # Typography-focused staggered reveal
-│       │   ├── ClientLogos.jsx       # Infinite scrolling brand ticker
-│       │   ├── FeaturedWork.jsx      # Sticky-panel scroll-driven gallery
-│       │   ├── HeroSection.jsx       # Randomized cinematic impact zone
-│       │   ├── InfiniteMarquee.jsx   # Velocity-aware slogans with custom cursor
-│       │   ├── LegacyAccordion.jsx   # Peeling card stack (Dual-device logic)
-│       │   ├── ReadyToRise.jsx       # Conversion-focused bottom anchor
-│       │   ├── Service.jsx           # Expertise/Service breakdown cards
-│       │   └── WhatsNew.jsx          # Dynamic insights & news layer
-│       └── layout/         # Persistent architectural components
-│           ├── AnnouncementBar.jsx   # Top-level global ticker
-│           ├── CinematicTransition.jsx # Custom SVG mask entry sequence
-│           ├── Footer.jsx            # Multi-column brand navigation
-│           └── Header.jsx            # The "Engine" (Mega-menu & GSAP morphing)
-├── next.config.mjs         # Image optimization & routing config
-├── jsconfig.json           # Path aliasing (@/*)
-└── package.json            # Cutting-edge stack (React 19, Tailwind v4)
-```
-
----
-
-## ⚙️ Getting Started
-
-### Prerequisites
-
-- Node.js 20.x or later
-- npm or pnpm
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/rakibsbase/RiseAtSeven.git
-   ```
-2. Navigate to the directory:
-   ```bash
-   cd RiseAtSeven
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-### Development
-
-Run the local dev server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view the project.
-
-### Build
-
-Generate a production bundle:
-
-```bash
-npm run build
-```
-
----
-
 ## 🧠 Architecture & Implementation Notes
 
 ### 1. GSAP Layout-Aware Scaling
@@ -160,7 +79,7 @@ Typography in `HeroSection` and `AboutMission` utilizes an `overflow-hidden` wra
 
 ## ⚖️ Disclosure
 
-This is a **Frontend Portfolio Project**.
+This is a **Frontend Project**.
 
 - **What was cloned:** The entire homepage UI, animation system, and responsive architecture.
 - **What links back:** To provide a full-site experience, all internal links (e.g., specific case studies, blog posts, service pages) point directly to the original `riseatseven.com` domain. This ensures visitors can explore the agency's full depth while focusing the project's scope on the technical frontend implementation of the home view.
