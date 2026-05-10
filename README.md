@@ -1,107 +1,207 @@
-# Rise at Seven | Pixel-Perfect Agency Clone
+# 🚀 Rise at Seven — Modern Agency Experience Clone
 
-[![Vercel Deploy](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)](https://rise-at-seven-ivory.vercel.app)
-[![Next.js Version](https://img.shields.io/badge/Next.js-15.x-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
-[![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com)
-[![GSAP](https://img.shields.io/badge/GSAP-3.15-88CE02?style=for-the-badge&logo=greensock)](https://greensock.com/gsap/)
-
-A high-fidelity, performance-grade reconstruction of the **Rise at Seven** agency homepage. This project serves as a technical showcase of advanced frontend orchestration, utilizing a cutting-edge stack to replicate complex agency-grade UI/UX patterns.
-
-**[Live Demo](https://rise-at-seven-pink.vercel.app/) • [Original Site](https://riseatseven.com)**
+> A cinematic frontend recreation inspired by the award-winning digital agency experience of Rise at Seven.
 
 ---
 
-## ⚡ The Challenge
+## 🌐 Project Overview
 
-Rise at Seven is renowned for its "search-first" creative approach and its highly interactive, editorial-style web presence. The goal of this project was to replicate their core homepage experience with pixel-perfect precision, maintaining all fluid animations, scroll-triggered sequences, and interactive states while ensuring a seamless transition to their original internal pages.
+This project is a high-end reconstruction of the **Rise at Seven** homepage experience, built to showcase advanced frontend engineering, immersive animations, and editorial-style UI interactions.
 
----
+Instead of creating a simple static clone, the focus was on reproducing the *feel* of the original platform — smooth transitions, dynamic motion systems, responsive layouts, and premium interactions.
 
-## 🛠️ Tech Stack
-
-| Category       | Technology                                                                        |
-| :------------- | :-------------------------------------------------------------------------------- |
-| **Framework**  | [Next.js 15+](https://nextjs.org/) (App Router)                                   |
-| **Library**    | [React 19](https://react.dev/)                                                    |
-| **Styling**    | [Tailwind CSS 4](https://tailwindcss.com/) (Beta/Alpha)                           |
-| **Animation**  | [GSAP](https://greensock.com/gsap/) (ScrollTrigger, MatchMedia, Custom Modifiers) |
-| **Slider**     | [Swiper.js](https://swiperjs.com/)                                                |
-| **Icons**      | [React Icons](https://react-icons.github.io/react-icons/)                         |
-| **Deployment** | [Vercel](https://vercel.com)                                                      |
+🔗 **Live Demo:** [https://rise-at-seven-pink.vercel.app/](https://rise-at-seven-pink.vercel.app/)  
+🔗 **Original Website:** [https://riseatseven.com](https://riseatseven.com)
 
 ---
 
-## ✨ Key Features
+## 🧩 Core Objective
 
-- **🚀 Cinematic Entry Sequence:** A custom SVG mask-based reveal (`CinematicTransition`) that orchestrates the initial page load with a premium "peeling" effect.
-- **💎 Advanced Desktop Mega Menu:**
-  - **Layout-Aware Morphing:** Uses GSAP to calculate scale factors (`scaleX`/`scaleY`) between different menu sizes to prevent visual "jumping."
-  - **Sliding Pill Navigation:** A context-aware hover background that fluidly follows the cursor across navigation items.
-  - **Asset Previews:** Real-time image previews that update on link hover with scale/blur transitions.
-- **📜 Scroll-Driven "Peeling" Stack:** The `LegacyAccordion` component features a tactile card stack where cards slide upward and rotate slightly (`-5deg`) as the user scrolls, revealing the content beneath.
-- **🎨 Interactive Gallery:** A "sticky-panel" work section where project titles remain fixed on the left while a vertical stack of image cards scrolls on the right, synchronized via `ScrollTrigger`.
-- **🌀 Responsive Infinite Marquee:**
-  - **Velocity Sensing:** The marquee speed dynamically scales based on the user's scroll speed.
-  - **Seamless Loop:** Implemented using GSAP's modulo unitize modifier for zero-jump repetition.
-- **🖱️ Magnetic Custom Cursor:** A floating interactive cursor that reacts to specific sections (Gallery, Marquee) to provide contextual feedback.
-- **📱 Hybrid Mobile UX:** Graceful degradation of complex desktop animations into touch-optimized Swiper carousels and accordion navigation.
+The goal of this project was to:
+
+- Recreate the homepage with high visual accuracy
+- Maintain smooth motion and premium interaction quality
+- Build scalable and reusable UI architecture
+- Ensure responsive behavior across all devices
+- Demonstrate advanced GSAP animation orchestration
 
 ---
 
-## 🧠 Architecture & Implementation Notes
+# ⚙️ Tech Ecosystem
 
-### 1. GSAP Layout-Aware Scaling
-
-In `Header.jsx`, the mega menu doesn't just "show" and "hide." It remembers the dimensions of the _previous_ menu. When switching between "Services" (wide) and "Industries" (narrow), GSAP calculates the scale ratio and transforms the panel fluidly, making the change feel organic rather than a simple toggle.
-
-### 2. Scroll Velocity Detection
-
-The `InfiniteMarquee` uses `ScrollTrigger.getVelocity()` to normalize user input. This value is mapped to the `timeScale` of the GSAP tween, allowing the text to "rush" ahead when the user scrolls fast and settle back to its base speed when the scroll stops.
-
-### 3. The "Min-W-0" Flexbox Fix
-
-Throughout the codebase (especially in the Mega Menu and Featured Work), `min-w-0` is used strategically on flex/grid items to allow text truncation (`truncate`) to function correctly within deeply nested animated containers.
-
-### 4. Overflow-Hidden Character Reveal
-
-Typography in `HeroSection` and `AboutMission` utilizes an `overflow-hidden` wrapper on individual words/lines. GSAP then animates these elements from `y: 40` with a slight `rotateX`, creating a "reveal from the floor" effect that is a staple of high-end design.
+| Technology      | Purpose                |
+| ---------------- | ---------------------- |
+| Next.js 15       | App Router & Rendering |
+| React 19         | Component Architecture |
+| Tailwind CSS v4  | Utility-first Styling  |
+| GSAP             | Animation System       |
+| ScrollTrigger    | Scroll-based Motion    |
+| Swiper.js        | Mobile Sliders         |
+| React Icons      | Iconography            |
+| Vercel           | Deployment             |
 
 ---
 
-## 📸 Screenshots
+# ✨ Experience Highlights
 
-|                                Desktop View                                |                                Mobile View                                |
-| :------------------------------------------------------------------------: | :-----------------------------------------------------------------------: |
-| ![Desktop Screenshot Placeholder](https://i.ibb.co.com/Vcn1hLp7/image.png) | ![Mobile Screenshot Placeholder](https://i.ibb.co.com/F49fNwhC/image.png) |
-|                    _High-impact Hero & Sticky Gallery_                     |                   _Touch-optimized Swiper & Accordions_                   |
+## 🎬 Cinematic Loader
 
----
+A custom SVG-driven entry animation introduces the experience with a premium reveal effect.
 
-## ⚖️ Disclosure
+### Features
 
-This is a **Frontend Project**.
-
-- **What was cloned:** The entire homepage UI, animation system, and responsive architecture.
-- **What links back:** To provide a full-site experience, all internal links (e.g., specific case studies, blog posts, service pages) point directly to the original `riseatseven.com` domain. This ensures visitors can explore the agency's full depth while focusing the project's scope on the technical frontend implementation of the home view.
+- Mask-based transitions
+- Smooth page reveal choreography
+- High-end editorial motion feel
 
 ---
 
-## 🔮 Future Improvements
+## 🧠 Smart Mega Menu
 
-- [ ] Integration of a headless CMS (Sanity/Contentful) for the `WhatsNew` section.
-- [ ] Dark mode toggle (original site is light-mode focused).
-- [ ] Further LCP optimizations for the Hero background randomization logic.
+An advanced navigation system designed with fluid transformations.
 
----
+### Includes
 
-## 👤 Author
-
-**Didarul Alam Swapnil**
-
-- GitHub: [Lynx-Swapnil](https://github.com/Lynx-Swapnil)
-- Portfolio: [Didarul Alam Swapnil](https://lynx-swapnil.github.io/Didarul_Alam_Swapnil-Portfolio/)
-- LinkedIn: [Connect with me](https://www.linkedin.com/in/didarul-alam-swapnil/)
+- Dynamic menu scaling
+- Hover-aware pill navigation
+- Real-time preview switching
+- GSAP layout interpolation
 
 ---
 
-_Built with passion for pixel-perfection._
+## 📜 Scroll-Based Layer Reveal
+
+Cards peel upward while scrolling, creating a tactile storytelling effect.
+
+### Animation Details
+
+- Rotational card motion
+- Depth illusion
+- Scroll synchronization
+- Smooth stacking behavior
+
+---
+
+## 🎨 Sticky Gallery Interaction
+
+A split-layout gallery where titles stay pinned while visual content scrolls independently.
+
+### Benefits
+
+- Better content focus
+- Editorial presentation
+- Smooth visual pacing
+
+---
+
+## 🌀 Infinite Motion Marquee
+
+An adaptive marquee powered by scroll velocity.
+
+### Capabilities
+
+- Scroll-speed responsive motion
+- Seamless looping
+- Dynamic tween scaling
+
+---
+
+## 🖱️ Interactive Cursor System
+
+A magnetic cursor interaction layer designed to enhance user immersion.
+
+### Behaviors
+
+- Context-aware interactions
+- Hover scaling
+- Smooth magnetic motion
+
+---
+
+## 📱 Responsive Mobile Experience
+
+Desktop-heavy interactions gracefully adapt into mobile-friendly interfaces.
+
+### Mobile Enhancements
+
+- Swiper carousels
+- Touch-optimized navigation
+- Lightweight animation fallbacks
+
+---
+
+# 🏗️ Architecture Insights
+
+## 1️⃣ Layout-Aware Animation Scaling
+
+The mega menu intelligently measures previous and current dimensions before animating transitions, preventing harsh layout jumps.
+
+---
+
+## 2️⃣ Scroll Velocity Mapping
+
+Using `ScrollTrigger.getVelocity()`, the interface dynamically adjusts motion speed based on user scroll intensity.
+
+---
+
+## 3️⃣ Flexbox Stability Fixes
+
+Strategic use of `min-w-0` ensures text truncation and layout stability inside deeply nested animated containers.
+
+---
+
+## 4️⃣ Typography Reveal System
+
+Text content is animated line-by-line using overflow clipping and vertical transforms for cinematic entrance effects.
+
+---
+
+# 📸 Visual Showcase
+
+| Desktop Experience                              | Mobile Experience                         |
+| ----------------------------------------------- | ----------------------------------------- |
+| High-impact hero section with sticky galleries  | Optimized sliders and touch interactions  |
+
+---
+
+# ⚖️ Project Disclosure
+
+This project focuses purely on **frontend engineering and UI recreation**.
+
+### Included
+
+- Homepage layout recreation
+- Animation system recreation
+- Responsive behavior implementation
+- Interactive UI systems
+
+### External Routing
+
+Internal links redirect users to the official Rise at Seven website for deeper content exploration.
+
+---
+
+# 🔮 Planned Improvements
+
+- CMS integration for dynamic content
+- Optional dark mode support
+- Improved hero performance optimization
+- Additional accessibility refinements
+
+---
+
+# 👨‍💻 Developer
+
+## Didarul Alam Swapnil
+
+- GitHub → [https://github.com/Lynx-Swapnil](https://github.com/Lynx-Swapnil)
+- Portfolio → [https://lynx-swapnil.github.io/Didarul_Alam_Swapnil-Portfolio/](https://lynx-swapnil.github.io/Didarul_Alam_Swapnil-Portfolio/)
+- LinkedIn → [https://www.linkedin.com/in/didarul-alam-swapnil/](https://www.linkedin.com/in/didarul-alam-swapnil/)
+
+---
+
+# ❤️ Final Note
+
+Built with a deep focus on motion design, frontend architecture, and pixel-perfect execution.
+
+This project demonstrates how modern frontend tooling can recreate immersive agency-grade digital experiences with performance and scalability in mind.
